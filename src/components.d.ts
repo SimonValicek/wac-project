@@ -6,32 +6,34 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface SvAmbulanceWlList {
+    interface ReservationManager {
+        "apiBase": string;
     }
 }
 declare global {
-    interface HTMLSvAmbulanceWlListElement extends Components.SvAmbulanceWlList, HTMLStencilElement {
+    interface HTMLReservationManagerElement extends Components.ReservationManager, HTMLStencilElement {
     }
-    var HTMLSvAmbulanceWlListElement: {
-        prototype: HTMLSvAmbulanceWlListElement;
-        new (): HTMLSvAmbulanceWlListElement;
+    var HTMLReservationManagerElement: {
+        prototype: HTMLReservationManagerElement;
+        new (): HTMLReservationManagerElement;
     };
     interface HTMLElementTagNameMap {
-        "sv-ambulance-wl-list": HTMLSvAmbulanceWlListElement;
+        "reservation-manager": HTMLReservationManagerElement;
     }
 }
 declare namespace LocalJSX {
-    interface SvAmbulanceWlList {
+    interface ReservationManager {
+        "apiBase"?: string;
     }
     interface IntrinsicElements {
-        "sv-ambulance-wl-list": SvAmbulanceWlList;
+        "reservation-manager": ReservationManager;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "sv-ambulance-wl-list": LocalJSX.SvAmbulanceWlList & JSXBase.HTMLAttributes<HTMLSvAmbulanceWlListElement>;
+            "reservation-manager": LocalJSX.ReservationManager & JSXBase.HTMLAttributes<HTMLReservationManagerElement>;
         }
     }
 }
